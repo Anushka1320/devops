@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+         body {
+            margin: 10px;
+            padding: 10px;
+         }
+      </style>
+  
+<body onload="shadow();">
+<canvas id="square" width="150" height="150"></canvas>
+<br>
+<br>
+<hr>
+<canvas id="circle" width="200" height="200"></canvas>
+<br>
+<br>
+<hr>
+<canvas id="reactangle" width="300" height="150" ></canvas>
+
+<script>
+var canvas = document.getElementById('square');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "red";
+ctx.fillRect (10, 10, 95, 90);
+ctx.fillStyle = "green";
+ctx.fillRect (50, 50, 105, 100);
+
+          function shadow() {
+            var canvas1 = document.getElementById('circle');
+            var context = canvas1.getContext('2d');
+            context.shadowOffsetX = 20;
+            context.shadowOffsetY = 20;
+            context.shadowBlur = 10;
+            context.shadowColor = 'green';
+            context.arc(90, 90, 50, 1 * Math.PI, 5 * Math.PI);
+            context.fillStyle = 'red';
+            context.fill();
+         }
+
+const react= document.getElementById('reactangle');
+const r = react.getContext("2d");
+r.fillStyle = "red";
+r.rect(50, 50, 120, 80);
+r.fill();
+r.fillStyle = "green";
+r.rect(80, 90, 140, 100);
+r.fill();
+</script>
+</body>
+</html>
+
+      
+
+
+    
